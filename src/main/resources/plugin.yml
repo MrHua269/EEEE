@@ -1,0 +1,9 @@
+name: EEEEserverplugin
+version: ${project.version}
+main: org.wangxyper.EEEserverPlugin.Main
+authors: [ wangxyper ]
+description: 这是某位沙雕腐竹给他自己的沙雕服务器写的插件(bug)
+commands:
+  setmessage:
+    description: 设置玩家的出入消息
+    usage: /setmessage <1-0> <String>
