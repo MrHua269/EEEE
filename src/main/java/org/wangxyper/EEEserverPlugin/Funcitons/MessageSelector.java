@@ -1,5 +1,7 @@
 package org.wangxyper.EEEserverPlugin.Funcitons;
 
+import java.awt.*;
+
 public class MessageSelector {
     private String LeftMessage = "喝茶去了";
     private String JoinMessage = "加入了服务器";
@@ -10,7 +12,7 @@ public class MessageSelector {
             if(isop == false){
             return "[玩家]" + username + this.JoinMessage;
             }else{
-                return "[管理员]" + username + this.JoinMessage;
+                return "\r[管理员]" + username + this.JoinMessage;
             }
         }else{
             if(isop == false){
