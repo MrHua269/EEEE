@@ -21,8 +21,10 @@ public class SetMessage implements CommandExecutor {
                if(args[0]=="reset"){
               get.setMessage("awa",true，false)
 
-              }else{return false;}
-            }
+              }
+           }
+       else{return false;}
+            
             return true;
         } else {
             return false;
