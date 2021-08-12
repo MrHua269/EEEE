@@ -9,12 +9,12 @@ public class SetMessage implements CommandExecutor {
     private MessageSelector get =new MessageSelector();
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (sender.isOp() == true) {
-            if (args[1]!=null && args[2]!=null){
-                if(args[1] =="1"){
-                    get.setMessage(args[2],false,false);
+        if (sender.isOp()) {
+            if (args[0]!=null && args[1]!=null){
+                if(args[0] =="join"){
+                    get.setMessage(args[1],false,false);
                 }else{
-                    get.setMessage(args[2],false,true);
+                    get.setMessage(args[1],false,true);
                 }
 
             }
