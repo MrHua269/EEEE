@@ -1,3 +1,4 @@
 EnableBossBar: true
 BossBarColor: "GREEN"
 BarString: "Hello The EEEEE Server!"
+SleepTime: 1000

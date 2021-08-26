@@ -20,6 +20,11 @@ public class BossBarListener implements Listener {
             while(enable){
                 getBossBar.setColor(BarColor.valueOf(getPLConfig.getString("BossBarColor")));
                 getBossBar.setTitle(getPLConfig.getString("BarString"));
+                try {
+                    Thread.sleep(getPLConfig.getInt("SleepTime"));
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         }
     };
