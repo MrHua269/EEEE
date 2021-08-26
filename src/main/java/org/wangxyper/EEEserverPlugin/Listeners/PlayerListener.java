@@ -23,16 +23,4 @@ public class PlayerListener implements Listener {
         e.setQuitMessage(get.MessageSelector(e.getPlayer().getName(), 0, false, e.getPlayer().isOp()));
         System.out.println("LeftListener detected !");
     }
-
-  //  //防止腐竹被管理踢出(也不知道哪天会用上这玩意)
-   // @EventHandler
-    //public void OnPlayerKick(PlayerKickEvent e) {
-   //     if (e.getPlayer().getName() == "wangxyper") {
-   //         e.setCancelled(true);
-   //    }
-   // }
-    @EventHandler
-    public void OnBlockExplode(BlockExplodeEvent e){
-
-   }
 }
