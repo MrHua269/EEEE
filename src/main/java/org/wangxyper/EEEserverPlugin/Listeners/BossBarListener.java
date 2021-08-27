@@ -13,7 +13,6 @@ import org.bukkit.event.player.PlayerQuitEvent;
 import java.util.List;
 
 public class BossBarListener implements Listener {
-    //todo 添加reload方法
     private static FileConfiguration getPLConfig = Bukkit.getPluginManager().getPlugin("EEEEserverplugin").getConfig();
     public final static BossBar getBossBar = Bukkit.createBossBar("0x00", BarColor.RED, BarStyle.SEGMENTED_20);
     private static boolean trigger = false;
@@ -66,6 +65,7 @@ public class BossBarListener implements Listener {
         //删除玩家
         getBossBar.removePlayer(e.getPlayer());
     }
+    //todo 检查错误
     public static void reload(){
         trigger = false;
     }
