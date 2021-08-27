@@ -1,4 +1,15 @@
 EnableBossBar: true
-BossBarColor: "GREEN"
-BarString: "Hello The EEEEE Server!"
 SleepTime: 1000
+BarColors:
+  - "BLUE"
+  - "GREEN"
+  - "RED"
+  - "YELLOW"
+BarStrings:
+  - "cvc"
+  - "c++"
+  - "awa"
+  - "qwq"
+  - "owo"
+JoinMessage: "加入了服务器"
+LeftMessage: "离开了"
