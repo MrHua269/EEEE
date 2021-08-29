@@ -3,6 +3,7 @@ package org.wangxyper.EEEserverPlugin;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.wangxyper.EEEserverPlugin.Commands.MNB;
 import org.wangxyper.EEEserverPlugin.Commands.ReloadCommand;
 import org.wangxyper.EEEserverPlugin.Listeners.BossBarListener;
 import org.wangxyper.EEEserverPlugin.Listeners.PlayerListener;
@@ -29,6 +30,7 @@ public final class Main extends JavaPlugin {
         this.getLogger().info(ChatColor.GREEN+"已注册");
         this.getLogger().info(ChatColor.LIGHT_PURPLE+"注册命令......");
         this.getCommand("reloadeeee").setExecutor(new ReloadCommand());
+        this.getCommand("mnb").setExecutor(new MNB());
         this.getLogger().info(ChatColor.GREEN+"已注册");
         this.getLogger().info(ChatColor.LIGHT_PURPLE+"启用Boss栏为："+getConfig().getBoolean("EnableBossBar"));
         this.getLogger().info(ChatColor.LIGHT_PURPLE+"Boss栏更新时间："+getConfig().getBoolean("SleepTime"));
