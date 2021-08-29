@@ -17,7 +17,7 @@ public class ReloadCommand implements CommandExecutor {
             }return true;
         }else{
             commandSender.sendMessage(ChatColor.RED+"您没有该权限执行此命令");
-            return false;
+            return true;
         }
     }
 }
