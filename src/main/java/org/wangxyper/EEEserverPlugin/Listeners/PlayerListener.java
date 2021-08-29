@@ -11,9 +11,10 @@ import org.bukkit.event.player.PlayerKickEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.world.SpawnChangeEvent;
 
+import static org.wangxyper.EEEserverPlugin.Utils.getPLConfig;
+
 public class PlayerListener implements Listener {
-    private static FileConfiguration getPLConfig = Bukkit.getPluginManager().getPlugin("EEEEserverplugin").getConfig();
-    //设置登入时或退出时广播的消息
+    //修改登入时或退出时广播的消息
     @EventHandler
     public void OnPlayerJoinGame(PlayerJoinEvent e) {
         e.setJoinMessage(e.getPlayer().getName()+" "+getPLConfig.getString("JoinMessage"));
@@ -21,7 +22,7 @@ public class PlayerListener implements Listener {
     }
     @EventHandler
     public void OnKick(PlayerKickEvent event){
-        event.setLeaveMessage(event.getPlayer().getName()+"被管理一jio踢出了服务器");
+        event.setLeaveMessage(ChatColor.RED+event.getPlayer().getName()+"被管理一jio踢出了服务器");
 
     }
     @EventHandler

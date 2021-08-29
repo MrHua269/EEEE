@@ -1,15 +1,23 @@
+###Boss栏部分
+#启用boss栏
 EnableBossBar: true
+#更新事件
 SleepTime: 1000
+#颜色列表
 BarColors:
   - "BLUE"
   - "GREEN"
   - "RED"
   - "YELLOW"
+#字符列表
 BarStrings:
   - "cvc"
   - "c++"
   - "awa"
   - "qwq"
   - "owo"
+##消息部分
+#进入服务器是显示的字符
 JoinMessage: "加入了服务器"
+#登出时显示的字符
 LeftMessage: "离开了"

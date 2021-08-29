@@ -12,6 +12,7 @@ import java.util.HashMap;
 public class MessageListener implements Listener {
     private HashMap<Player,Integer> MessageCache = new HashMap<>();
     private HashMap<Player,Boolean> CoolDownCache = new HashMap<>();
+    //防止刷屏
     @EventHandler
     public void OnMessage(AsyncPlayerChatEvent event){
       int CountCache = MessageCache.get(event.getPlayer());

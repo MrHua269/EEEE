@@ -4,9 +4,6 @@ main: org.wangxyper.EEEserverPlugin.Main
 authors: [ wangxyper ]
 description: 这是某位沙雕腐竹给他自己的沙雕服务器写的插件(bug)
 commands:
-  setmessage:
-    description: 设置玩家的出入消息
-    usage: /setmessage
-  awa:
-    description: awawa
-    usage: /awa
+ reloadeeee:
+   description: 重载插件
+   usage: /reloadeeee
