@@ -21,11 +21,6 @@ public class PlayerListener implements Listener {
        System.out.println(ChatColor.GREEN+"JoinListener detected !");
     }
     @EventHandler
-    public void OnKick(PlayerKickEvent event){
-        event.setLeaveMessage(ChatColor.RED+event.getPlayer().getName()+"被管理一jio踢出了服务器");
-
-    }
-    @EventHandler
     public void OnPlayerLeftGame(PlayerQuitEvent e) {
         e.setQuitMessage(e.getPlayer().getName()+" "+getPLConfig.getString("LeftMessage"));
         System.out.println(ChatColor.GREEN+"LeftListener detected !");
@@ -33,9 +28,5 @@ public class PlayerListener implements Listener {
     @EventHandler
     public void OnBlockBOOM(BlockExplodeEvent event){
         event.setYield(1.00f);
-    }
-    @EventHandler
-    public void OnSpawnChange(SpawnChangeEvent event){
-        Bukkit.broadcastMessage(ChatColor.RED+"世界出生点已被改变，原出生点坐标："+event.getPreviousLocation().getBlockX()+","+event.getPreviousLocation().getBlockY()+","+event.getPreviousLocation().getBlockZ());
     }
 }
