@@ -11,29 +11,33 @@ import org.wangxyper.EEEserverPlugin.Listeners.PlayerListener;
 public final class Main extends JavaPlugin {
     @Override
     public void onEnable() {
+        try{
 
-         //装逼字幕
-        this.getLogger().info(ChatColor.GREEN+" //////////////////////////////////////////////////////////////////////");
-        this.getLogger().info(ChatColor.GREEN+" %%%%%%%%   %%%%%%%%   %%%%%%%%   %%%%%%%%   %%%%%%%%   %%%%%%%%%%");
-        this.getLogger().info(ChatColor.GREEN+" %%         %%         %%         %%         %%         %%      %%");
-        this.getLogger().info(ChatColor.GREEN+" %%         %%         %%         %%         %%         %%      %%");
-        this.getLogger().info(ChatColor.GREEN+" %%%%%%%%   %%%%%%%%   %%%%%%%%   %%%%%%%%   %%%%%%%%   %%%%%%%%%%");
-        this.getLogger().info(ChatColor.GREEN+" %%         %%         %%         %%               %%   %%");
-        this.getLogger().info(ChatColor.GREEN+" %%         %%         %%         %%               %%   %%");
-        this.getLogger().info(ChatColor.GREEN+" %%%%%%%%   %%%%%%%%   %%%%%%%%   %%%%%%%%   %%%%%%%%   %% V1.0.5PRE-1");
-        this.getLogger().info(ChatColor.GREEN+" //////////////////////////////////////////////////////////////////////");
-        //初始化
-        this.saveDefaultConfig();
-        this.getLogger().info(ChatColor.LIGHT_PURPLE+"注册监听器......");
-        Bukkit.getPluginManager().registerEvents(new PlayerListener(),this);
-        Bukkit.getPluginManager().registerEvents(new BossBarListener(),this);
-        this.getLogger().info(ChatColor.GREEN+"已注册");
-        this.getLogger().info(ChatColor.LIGHT_PURPLE+"注册命令......");
-        this.getCommand("reloadeeee").setExecutor(new ReloadCommand());
-        this.getCommand("mnb").setExecutor(new MNB());
-        this.getLogger().info(ChatColor.GREEN+"已注册");
-        this.getLogger().info(ChatColor.LIGHT_PURPLE+"启用Boss栏为："+getConfig().getBoolean("EnableBossBar"));
-        this.getLogger().info(ChatColor.LIGHT_PURPLE+"Boss栏更新时间："+getConfig().getBoolean("SleepTime"));
+            //装逼字幕
+            this.getLogger().info(ChatColor.GREEN+" //////////////////////////////////////////////////////////////////////");
+            this.getLogger().info(ChatColor.GREEN+" %%%%%%%%   %%%%%%%%   %%%%%%%%   %%%%%%%%   %%%%%%%%   %%%%%%%%%%");
+            this.getLogger().info(ChatColor.GREEN+" %%         %%         %%         %%         %%         %%      %%");
+            this.getLogger().info(ChatColor.GREEN+" %%         %%         %%         %%         %%         %%      %%");
+            this.getLogger().info(ChatColor.GREEN+" %%%%%%%%   %%%%%%%%   %%%%%%%%   %%%%%%%%   %%%%%%%%   %%%%%%%%%%");
+            this.getLogger().info(ChatColor.GREEN+" %%         %%         %%         %%               %%   %%");
+            this.getLogger().info(ChatColor.GREEN+" %%         %%         %%         %%               %%   %%");
+            this.getLogger().info(ChatColor.GREEN+" %%%%%%%%   %%%%%%%%   %%%%%%%%   %%%%%%%%   %%%%%%%%   %% V1.1");
+            this.getLogger().info(ChatColor.GREEN+" //////////////////////////////////////////////////////////////////////");
+            //初始化
+            this.saveDefaultConfig();
+            Utils.getPLConfig = getConfig();
+            Thread.sleep(3000);
+            this.getLogger().info(ChatColor.LIGHT_PURPLE+"注册监听器......");
+            Bukkit.getPluginManager().registerEvents(new PlayerListener(),this);
+            Bukkit.getPluginManager().registerEvents(new BossBarListener(),this);
+            this.getLogger().info(ChatColor.GREEN+"已注册");
+            this.getLogger().info(ChatColor.LIGHT_PURPLE+"注册命令......");
+            this.getCommand("reloadeeee").setExecutor(new ReloadCommand());
+            this.getCommand("mnb").setExecutor(new MNB());
+            this.getLogger().info(ChatColor.GREEN+"已注册");
+            this.getLogger().info(ChatColor.LIGHT_PURPLE+"启用Boss栏为："+getConfig().getBoolean("EnableBossBar"));
+            this.getLogger().info(ChatColor.LIGHT_PURPLE+"Boss栏更新时间："+getConfig().getBoolean("SleepTime"));
+        }catch (Exception e){}
     }
 
     @Override

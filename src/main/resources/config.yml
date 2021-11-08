@@ -21,3 +21,6 @@ BarStrings:
 JoinMessage: "加入了服务器"
 #登出时显示的字符
 LeftMessage: "离开了"
+#消息颜色
+MessageColorOnJoin: "GREEN"
+MessageColorOnLeft: "RED"

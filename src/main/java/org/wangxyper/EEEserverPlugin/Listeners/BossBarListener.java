@@ -23,7 +23,7 @@ public class BossBarListener implements Listener {
     public static Thread updateTitleThread = new Thread(){
         public void run(){
             //在字符串列表的范围内循环
-            while(enable){
+            while(enable&&trigger){
              for(int i=0;i<Strings.size()&&trigger;i++) {
                 getBossBar.setTitle(Strings.get(i));
                  //休眠
@@ -37,13 +37,12 @@ public class BossBarListener implements Listener {
     public static Thread updateColorThread = new Thread(){
       public void run(){
           //在字符串列表范围内循环
-          while(enable){
+          while(enable&&trigger){
             for(int i=0;i<BarColorStrings.size()&&trigger;i++) {
              //利用BarColor.valueOf把字符串转换成颜色
               getBossBar.setColor(BarColor.valueOf(BarColorStrings.get(i)));
               //休眠
               try { Thread.sleep(getPLConfig.getInt("SleepTime")); } catch (InterruptedException e) { e.printStackTrace(); }
-
            }
           }
       }

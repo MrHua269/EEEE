@@ -72,7 +72,7 @@ public class MNB implements CommandExecutor {
                             getPlayer.sendMessage("卖瓜人:萨日朗！！！！！！！！！！！！！！！！！！！！！");
                             getOffPlayer.sendMessage("卖瓜人:萨日朗！！！！！！！！！！！！！！！！！！！！！");
                             Thread.sleep(10000);
-                            getPlayer.damage(45784151482000000062415400000000000000000000000D * 54826458888888888100000054000000000000000000000000000000000000000000000000000000001D);
+                            getPlayer.damage(114514.114514);
                         }catch (Exception ignored){}
                     }
                 };
